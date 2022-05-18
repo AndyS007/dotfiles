@@ -139,16 +139,8 @@ source $ZSH/oh-my-zsh.sh
 #  zle -N down-line-or-beginning-search
 #  bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
 #fi
-alias proxy='export all_proxy=socks5://127.0.0.1:1080'
-alias unproxy='unset all_proxy'
-alias ip='curl cip.cc'
-alias -s py=python3       # 在命令行直接输入 python 文件，会用 vim 中打开，以下类似
-alias -s js=vi
-alias -s c=vi
-alias -s java=vi
-alias -s txt=vi
-alias ll='ls -lh'
-alias la='ls -alh'
 
-# dotfiles manager
-alias dm=chezmoi;
+# Test if ~/.aliases exists and source it
+if [ -f ~/.aliases ]; then
+    source ~/.aliases
+fi
