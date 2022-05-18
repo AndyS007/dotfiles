@@ -71,9 +71,11 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh_reload cp   sudo   command-not-found   colored-man-pages  zsh-syntax-highlighting autojump)
-
+if [[ "$(uname)" == "Darwin" ]];then
+plugins+=(osx)
+fi
 #osx
-#可能跟macos相关
+#跟macos相关
 #vi-mode
 #用vi进行命令行编辑
 #cp
