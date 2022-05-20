@@ -1,0 +1,10 @@
+# This is Git's per-user configuration file.
+[alias]
+    graph = log --all --graph --decorate --oneline
+[user]
+# Please adapt and uncomment the following lines:
+	email = 445998251@qq.com 
+	name = andy
+[core]
+	autocrlf = input
+	excludesfile = /Users/andy/.gitignore_global

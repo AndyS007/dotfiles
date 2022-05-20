@@ -70,32 +70,59 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh_reload cp   sudo   command-not-found   colored-man-pages  zsh-syntax-highlighting autojump)
+#
+plugins=(git zsh-syntax-highlighting)
+
+#z -- just like autojump but don't need to install yourself
+plugins+=(z)
+#gitignore
+#提供一条 gi 命令，用来查询 gitignore 模板。比如你新建了一个 python 项目，就可以用
+# gi python > .gitignore 
+# 来生成一份gitignore文件
+plugins+=(gitignore)
+
+
+#git-open
+#提供一个 git-open 命令，在浏览器中打开当前所在 git 项目的远程仓库地址。
+plugins+=(git-open)
+
+#themes
+#提供一条 theme 命令，用来随时手动切换主题。在想要尝试各种主题的时候很实用，不需要一直改 zshrc 然后重载
+#plugins+=(themes)
+#osx
+#跟macos相关
+#ofd Open the current directory in a Finder window
+#pfd Return the path of the frontmost Finder window
+#pfs Return the current Finder selection
 if [[ "$(uname)" == "Darwin" ]];then
 plugins+=(osx)
 fi
-#osx
-#跟macos相关
+
 #vi-mode
 #用vi进行命令行编辑
+#plugins+=(vi-mode)
 #cp
+plugins+=(cp)
 #提供一个 cpv 命令，这个命令使用 rsync 实现带进度条的复制功能。
 #extract
+plugins+=(extract)
 #提供一个 extract 命令，以及它的别名 x。功能是：一！键！解！压！你知道tar的四种写法吗？我也不知道，所以我装了这个。从今以后 tar, gz, zip, rar 全部使用 extract 命令解压，再也不用天天查 cheatsheet 啦！
 #zsh_reload
+plugins+=(zsh_reload)
 #提供一个 src 命令，重载 zsh
 #safe-paste
+#!!!会导致前缀历史查询失效
 #当你往 zsh 粘贴脚本时，它不会被立刻运行
+#plugins+=(safe-paste)
 #sudo
 #双击 Esc，zsh 会把上一条命令加上 sudo 给你
+plugins+=(sudo)
 #colored-man-pages
 #给你带颜色的 man 命令。
+plugins+=(colored-man-pages)
 #command-not-found
 #当你输入一条不存在的命令时，会自动查询这条命令可以如何获得。
-
-
-
-
+plugins+=(command-not-found)
 
 source $ZSH/oh-my-zsh.sh
 
