@@ -101,7 +101,7 @@ set mouse=a
 "set encoding=utf-8
 
 " Enable this to make vim paste content directly to the clipboard of system.
-"set clipboard=unnamed
+set clipboard=unnamed
 
 "NERDTree key mapping
 " nnoremap <C-n> :NERDTree<CR>
