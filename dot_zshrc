@@ -103,7 +103,7 @@ fi
 
 #vi-mode
 #用vi进行命令行编辑
-#plugins+=(vi-mode)
+plugins+=(vi-mode)
 #cp
 plugins+=(cp)
 #提供一个 cpv 命令，这个命令使用 rsync 实现带进度条的复制功能。

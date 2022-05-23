@@ -17,7 +17,7 @@ alias df="df -h"           # -h prints human readable format
 #proxy settings
 alias proxy='export all_proxy=socks5://127.0.0.1:1080'
 alias unproxy='unset all_proxy'
-alias ip='curl cip.cc'
+alias checkip='curl ipinfo.io'
 
 #use python3 to open .py files
 alias -s py=python3       
