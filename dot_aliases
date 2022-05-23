@@ -28,7 +28,7 @@ alias -s java=vi
 alias -s txt=vi
 
 # dotfiles manager
-alias dm=chezmoi
-alias ed="dm edit"
-alias ap="dm apply"
+#alias dm=chezmoi
+alias ed="chezmoi edit"
+alias ap="chezmoi apply"
 
