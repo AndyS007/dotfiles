@@ -192,8 +192,10 @@ fi
 # auto ls after cd command
 function chpwd() {
     emulate -L zsh
-    ls -a
+    ls 
 }
+# auto proxy as new shell starts
+export all_proxy=socks5://127.0.0.1:1080
 
 # Test if ~/.aliases exists and source it
 if [ -f ~/.aliases ]; then
