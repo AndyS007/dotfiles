@@ -10,7 +10,10 @@ alias v="vim"
 alias sl=ls
 
 # switch to current directory open in finder
+# only applicable to MacOS
+if [[ "$(uname)" == "Darwin" ]];then
 alias pfd="cd $(pfd)"
+fi
 # Overwrite existing commands for better defaults
 alias mv="mv -i"           # -i prompts before overwrite
 alias mkdir="mkdir -p"     # -p make parent dirs as needed
