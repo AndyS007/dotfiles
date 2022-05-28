@@ -9,6 +9,8 @@ alias v="vim"
 # Save you from mistyping
 alias sl=ls
 
+# switch to current directory open in finder
+alias pfd="cd $(pfd)"
 # Overwrite existing commands for better defaults
 alias mv="mv -i"           # -i prompts before overwrite
 alias mkdir="mkdir -p"     # -p make parent dirs as needed
@@ -31,4 +33,6 @@ alias -s txt=vi
 #alias dm=chezmoi
 alias ed="chezmoi edit"
 alias ap="chezmoi apply"
+# git alias
+alias gg="git graph"
 

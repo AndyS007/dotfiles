@@ -1,0 +1,44 @@
+set relativenumber
+
+""" Map leader to space ---------------------
+"nnoremap <SPACE> <Nop>
+let mapleader=","
+
+""" Plugins  --------------------------------
+set surround
+set NERDTree
+
+set easymotion
+set commentary
+"set multiple-cursors
+"set argtextobj
+"set textobj-entire
+"set ReplaceWithRegister
+
+""" Common settings -------------------------
+set showmode
+set so=5
+set incsearch
+set nu
+
+""" Mappings --------------------------------
+"support commands
+":NERDTree
+":NERDTreeFocus
+":NERDTreeToggle
+":NERDTreeClose
+":NERDTreeFind
+":NERDTreeRefreshRoot
+#map <leader>t :NERDTreeToggle<CR>
+"map <leader>n :NERDTree<CR>
+map <leader>t :NERDTreeFind<CR>
+map <leader>c :NERDTreeClose<CR>
+"cann't use exact nubmer like in original easymotion
+map s <Plug>(easymotion-sln)
+
+map <leader>rn <Action>(RenameElement)
+map <leader>h <Action>(HideAllWindows)
+map <leader>d <Action>(Debug)
+map <leader>s <Action>(Stop)
+map <leader>r <Action>(Run)
+map <leader>rc <Action>(RunClass)

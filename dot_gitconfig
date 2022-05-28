@@ -8,3 +8,6 @@
 [core]
 	autocrlf = input
 	excludesfile = /Users/andy/.gitignore_global
+
+[diff]
+	tool = vimdiff

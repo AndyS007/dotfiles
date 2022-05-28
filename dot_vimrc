@@ -10,12 +10,12 @@
 " `vim -u foo`).
 set nocompatible
 
-# enable persistent undo so that vim can save the undo history of that file
+" enable persistent undo so that vim can save the undo history of that file
 set undofile
-# options: set undodir to make all undofiles stored in one particular directory, search for details.
+" options: set undodir to make all undofiles stored in one particular directory, search for details.
 " remap <Leader>keys from '\'(default) to ','
-nnoremap <SPACE> <Nop>
-let mapleader=" "
+"nnoremap <SPACE> <Nop>
+let mapleader=","
 
 " show matching braces when text indicator is over them
 set showmatch 
@@ -154,8 +154,23 @@ map <Leader>/ <Plug>(easymotion-sn)
 " Turn on case-insensitive feature
 let g:EasyMotion_smartcase = 1
 
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+function! XTermPasteBegin()
+    set pastetoggle=<Esc>[201~
+    set paste
+    return ""
+endfunction
 ""Prettier Setting
-packloadall
+"packloadall
+
+" This turns off highlighting on the bits of code that are changed. So the line that is changed is highlighted so I can spot the changes, but the actual text that has changed stands out on the line (as it is not highlighted).
+"if &diff
+"        highlight! link DiffText MatchParen
+"    endif
 
 ""ALE setting: code linting
 ""From 韦易笑
