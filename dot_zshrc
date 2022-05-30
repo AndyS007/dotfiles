@@ -100,7 +100,7 @@ plugins+=(git-open)
 #pfd Return the path of the frontmost Finder window
 #pfs Return the current Finder selection
 if [[ "$(uname)" == "Darwin" ]];then
-plugins+=(osx)
+plugins+=(macos)
 fi
 
 #vi-mode
