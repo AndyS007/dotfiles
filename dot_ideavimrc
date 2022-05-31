@@ -36,9 +36,9 @@ map <leader>c :NERDTreeClose<CR>
 "cann't use exact nubmer like in original easymotion
 map s <Plug>(easymotion-sln)
 
-map <leader>rn <Action>(RenameElement)
+map <leader>n <Action>(RenameElement)
 map <leader>h <Action>(HideAllWindows)
 map <leader>d <Action>(Debug)
 map <leader>s <Action>(Stop)
 map <leader>r <Action>(Run)
-map <leader>rc <Action>(RunClass)
+map <leader>c <Action>(RunClass)

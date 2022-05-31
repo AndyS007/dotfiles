@@ -48,3 +48,12 @@ then
 else 
     echo "commentary.vim exist"
 fi
+
+#install easy-motion
+if [ ! -d  ~/.vim/pack/plugins/start/vim-easymotion ]
+then
+    git clone https://github.com/easymotion/vim-easymotion.git ~/.vim/pack/plugins/start/vim-easymotion
+else
+    echo "vim-easymoiton exist"
+fi
+

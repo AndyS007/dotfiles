@@ -2,7 +2,6 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # enable auto update of ohmyzsh
-# TODO:cannot update by "omz update"
 zstyle ':omz:update' mode auto
 
 # Path to your oh-my-zsh installation.
@@ -128,24 +127,14 @@ plugins+=(colored-man-pages)
 plugins+=(command-not-found)
 
 #zsh-syntax-highlighting
-#auto install if don't exist
-if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting ]; then
-    echo "zsh-syntax-highlighting doesn't exist, auto-installing"
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-fi
-#add it
 plugins+=(zsh-syntax-highlighting)
 
 #zsh-autosuggestions
-#auto install
-if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ]; then
-    echo "zsh-autosuggestions doesn't exist, auto-installing..."
-    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-fi
 plugins+=(zsh-autosuggestions)
 
 # set the font color of autosuggestions
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -203,3 +192,8 @@ if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
 
+# load sidecar toggle
+if [ -f ~/.connect_sidecar.sh ]
+then
+    source ~/.connect_sidecar.sh
+fi
