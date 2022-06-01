@@ -11,8 +11,16 @@
 set nocompatible
 
 " enable persistent undo so that vim can save the undo history of that file
+" Let's save undo info!
+if !isdirectory($HOME."/.vim")
+    call mkdir($HOME."/.vim", "", 0770)
+endif
+if !isdirectory($HOME."/.vim/undo-dir")
+    call mkdir($HOME."/.vim/undo-dir", "", 0700)
+endif
+set undodir=~/.vim/undo-dir
 set undofile
-" options: set undodir to make all undofiles stored in one particular directory, search for details.
+
 " remap <Leader>keys from '\'(default) to ','
 "nnoremap <SPACE> <Nop>
 let mapleader=","
