@@ -4,7 +4,8 @@
 if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-vi-mode ];then
     echo "zsh-vi-mode is not installed"
     git clone https://github.com/jeffreytse/zsh-vi-mode \
-        $ZSH_CUSTOM/plugins/zsh-vi-mode
+        ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-vi-mode
+
 else 
         echo "zsh-vi-mode installed"
 fi
@@ -28,7 +29,7 @@ fi
 #git-open
 if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/git-open ] 
 then
-    git clone https://github.com/paulirish/git-open.git $ZSH_CUSTOM/plugins/git-open
+    git clone https://github.com/paulirish/git-open.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/git-open
 else
     echo "git-open installed"
 fi
