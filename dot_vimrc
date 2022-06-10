@@ -10,6 +10,9 @@
 " `vim -u foo`).
 set nocompatible
 
+" set visual mode color 
+hi Visual term=reverse cterm=reverse guibg=white
+
 " enable persistent undo so that vim can save the undo history of that file
 " Let's save undo info!
 if !isdirectory($HOME."/.vim")
