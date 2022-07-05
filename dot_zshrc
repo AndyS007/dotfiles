@@ -103,7 +103,7 @@ fi
 
 #vi-mode
 #用vi进行命令行编辑
-#plugins+=(vi-mode)
+# plugins+=(vi-mode)
 plugins+=(zsh-vi-mode)
 #cp
 plugins+=(cp)
@@ -166,19 +166,6 @@ source $ZSH/oh-my-zsh.sh
 
 # proxy list
 
-# start typing + [Up-Arrow] - fuzzy find history forward
-if [[ "${terminfo[kcuu1]}" != "" ]]; then
-  autoload -U up-line-or-beginning-search
-  zle -N up-line-or-beginning-search
-  bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
-fi
-# start typing + [Down-Arrow] - fuzzy find history backward
-if [[ "${terminfo[kcud1]}" != "" ]]; then
-  autoload -U down-line-or-beginning-search
-  zle -N down-line-or-beginning-search
-  bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
-fi
-
 # auto ls after cd command
 function chpwd() {
     emulate -L zsh
@@ -190,8 +177,11 @@ if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
 
+bindkey -v
 # load sidecar toggle
 if [ -f ~/.connect_sidecar.sh ]
 then
     source ~/.connect_sidecar.sh
 fi
+zvm_after_init_commands+=("bindkey '^[[A' up-line-or-beginning-search" "bindkey '^[[B' down-line-or-beginning-search")
+
