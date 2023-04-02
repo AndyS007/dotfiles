@@ -1,13 +1,13 @@
 #!/bin/bash
 #install ALE: code linting
-if [ ! -d ~/.vim/pack/git-plugins/start/ale ]
-then
-    echo "ALE don't exist and auto installing now"
-    mkdir -p ~/.vim/pack/git-plugins/start
-    git clone --depth 1 https://github.com/dense-analysis/ale.git ~/.vim/pack/git-plugins/start/ale
-else
-    echo "ALE: code linting plugins exist"
-fi
+#if [ ! -d ~/.vim/pack/git-plugins/start/ale ]
+#then
+#    echo "ALE don't exist and auto installing now"
+#    mkdir -p ~/.vim/pack/git-plugins/start
+#    git clone --depth 1 https://github.com/dense-analysis/ale.git ~/.vim/pack/git-plugins/start/ale
+#else
+#    echo "ALE: code linting plugins exist"
+#fi
 
 #install NERDTree
 if [ ! -d ~/.vim/pack/vendor/start/nerdtree ]
@@ -30,15 +30,15 @@ else
 fi
 
 #install repeat.vim for repeat command of plugins
-if [ ! -d ~/.vim/pack/tpope/start/repeat ]
-then
-    mkdir -p ~/.vim/pack/tpope/start
-    cd ~/.vim/pack/tpope/start
-    git clone https://tpope.io/vim/repeat.git
-else 
-    echo "vim repeat exist"
-fi
-#install commentary.vim
+#if [ ! -d ~/.vim/pack/tpope/start/repeat ]
+#then
+#    mkdir -p ~/.vim/pack/tpope/start
+#    cd ~/.vim/pack/tpope/start
+#    git clone https://tpope.io/vim/repeat.git
+#else 
+#    echo "vim repeat exist"
+#fi
+##install commentary.vim
 if [ ! -d ~/.vim/pack/tpope/start/commentary ]
 then
     mkdir -p ~/.vim/pack/tpope/start
@@ -50,10 +50,10 @@ else
 fi
 
 #install easy-motion
-if [ ! -d  ~/.vim/pack/plugins/start/vim-easymotion ]
-then
-    git clone https://github.com/easymotion/vim-easymotion.git ~/.vim/pack/plugins/start/vim-easymotion
-else
-    echo "vim-easymoiton exist"
-fi
+#if [ ! -d  ~/.vim/pack/plugins/start/vim-easymotion ]
+#then
+#    git clone https://github.com/easymotion/vim-easymotion.git ~/.vim/pack/plugins/start/vim-easymotion
+#else
+#    echo "vim-easymoiton exist"
+#fi
 

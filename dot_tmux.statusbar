@@ -2,7 +2,7 @@
 set-option -g status-bg black  
 set-option -g status-fg white 
 #set-option -g status-attr default
-set -g status-left ''
+set -g status-left '#{prefix_highlight}'
 set -g status-right '#[bg=magenta, fg=white bold] #(hostname) #[bg=cyan] %m/%d #[bg=red] %H:%M '
 
 

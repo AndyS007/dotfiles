@@ -1,4 +1,14 @@
-#!/bin/zsh
+#!/bin/bash
+
+# Execute order: 1
+# Functions:
+#   1. install zsh 
+#   2. install oh-my-zsh
+#   3. install relevant plugins
+# install zsh, ubuntu don't have zsh pre-install
+sudo apt install zsh
+# install on-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # zsh-vi-mode for replacing default vi-mode
 if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-vi-mode ];then
