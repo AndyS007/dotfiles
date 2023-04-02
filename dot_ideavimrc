@@ -1,7 +1,7 @@
 set relativenumber
 
 """ Map leader to space ---------------------
-"nnoremap <SPACE> <Nop>
+" nnoremap <SPACE> <Nop>
 let mapleader=","
 
 """ Plugins  --------------------------------
@@ -17,7 +17,7 @@ set commentary
 
 """ Common settings -------------------------
 set showmode
-set so=5
+set so=0
 set incsearch
 set nu
 
