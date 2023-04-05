@@ -40,3 +40,7 @@ alias ap="chezmoi apply"
 alias gg="git graph"
 alias gs="git status"
 alias gc="git commit"
+
+# alias for tailscale
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
