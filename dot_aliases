@@ -42,5 +42,22 @@ alias gs="git status"
 alias gc="git commit"
 
 # alias for tailscale
+if [[ "$(uname)" == "Darwin" ]];then
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+fi
 
+# alias for tmux attach
+alias t="tmux a"
+
+#Create x86 conda environment
+create_x86_conda_environment () {
+# example usage: create_x86_conda_environment myenv_x86 python=3.9
+ CONDA_SUBDIR=osx-64 conda create -n $@
+  conda activate $1
+  }
+  # Create ARM conda environment
+create_ARM_conda_environment () {
+# example usage: create_ARM_conda_environment myenv_x86 python=3.9
+    CONDA_SUBDIR=osx-arm64 conda create -n $@
+        conda activate $1
+}
