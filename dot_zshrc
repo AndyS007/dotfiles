@@ -195,4 +195,6 @@ listening() {
     fi
 }
 
-source ~/.conda_init.sh
+if [ -f ~/.conda_init.sh ]; then
+    source ~/.conda_init.sh
+fi
